@@ -42,3 +42,36 @@
   width: 20px;
   zoom: 1;
 }
+
+.rotating-nav-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.rotating-nav-inner > .item {
+  position: relative;
+  display: none;
+  -webkit-transition: .6s ease-in-out left;
+  transition: .6s ease-in-out left;
+  width: 200px;
+}
+
+.rotating-nav-inner > .item > img, .rotating-nav-inner > .item > a > img {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  line-height: 1;
+}
+
+.rotating-nav-inner > .active {
+  left: 20px;
+}
+
+.rotating-nav-inner > .active2 {
+  left: 20px;
+}
+
+.rotating-nav-inner > .active, .rotating-nav-inner > .active2, .rotating-nav-inner > .next, .rotating-nav-inner > .prev {
+  display: inline-block;
+}
