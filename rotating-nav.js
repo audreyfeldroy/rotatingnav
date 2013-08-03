@@ -151,7 +151,7 @@
     if (active2_index < active_index) {
         $('.active').addClass('pull-left');
     } else {
-        $('.active').removeClass('pull-left');
+        $('.item').removeClass('pull-left');
     }
 
     isCycling && this.cycle()
