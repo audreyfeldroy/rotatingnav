@@ -141,6 +141,12 @@
       this.sliding = false
       this.$element.trigger('slid')
     }
+    
+    if ($('.active2').index() < $('.active').index()) {
+        $('.active').addClass('pull-left');
+    } else {
+        $('.active').removeClass('pull-left');
+    }
 
     isCycling && this.cycle()
 

@@ -2,6 +2,10 @@
   max-width: 440px;
 }
 
+.pull-left {
+  float: left;
+}
+
 .btn-left {
   background-color: rgb(0, 0, 0);
   bottom: 0px;
