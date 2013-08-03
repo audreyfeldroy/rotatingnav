@@ -1,5 +1,5 @@
 .container {
-  max-width: 170px;
+  max-width: 440px;
 }
 
 .btn-left {
@@ -11,7 +11,7 @@
   display: block;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 20px;
-  height: 119px;
+  height: 140px;
   left: 0px;
   line-height: 28px;
   position: absolute;
@@ -31,7 +31,7 @@
   display: block;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 20px;
-  height: 119px;
+  height: 140px;
   left: auto;
   line-height: 28px;
   position: absolute;
