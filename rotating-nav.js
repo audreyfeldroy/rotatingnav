@@ -1,8 +1,8 @@
 /* ========================================================================
- * Bootstrap: carousel.js v3.0.0
+ * Copyright 2013 Audrey Roy
+ *
+ * Adapted from Bootstrap: carousel.js v3.0.0
  * http://twbs.github.com/bootstrap/javascript.html#carousel
- * ========================================================================
- * Copyright 2012 Twitter, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
