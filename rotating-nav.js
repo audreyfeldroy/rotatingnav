@@ -142,7 +142,13 @@
       this.$element.trigger('slid')
     }
     
-    if ($('.active2').index() < $('.active').index()) {
+    var active_index = $('.active').index()
+    var active2_index = $('.active2').index()
+    
+    console.log('.active index: ' + active_index)
+    console.log('.active2 index: ' + active2_index)
+
+    if (active2_index < active_index) {
         $('.active').addClass('pull-left');
     } else {
         $('.active').removeClass('pull-left');
