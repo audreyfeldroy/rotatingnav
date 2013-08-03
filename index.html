@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rotating Nav Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="rotating-nav.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+
+  <div id="carousel-example-generic" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="item active">
+        <img data-src="holder.js/200x140/auto/#777:#555/text:First slide" alt="">
+      </div>
+      <div class="item">
+        <img data-src="holder.js/200x140/auto/#666:#444/text:Second slide" alt="">
+      </div>
+      <div class="item">
+        <img data-src="holder.js/200x140/auto/#555:#333/text:Third slide" alt="">
+      </div>
+    </div>
+    
+    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+      <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+      <span class="icon-next"></span>
+    </a>
+  </div>
+
+</div>
+<script src="jquery.min.js"></script>
+<script src="holder.js"></script>
+<script src="carousel.js"></script>
+<script src="example.js"></script>
+<script>
+$('.carousel').carousel();
+</script>
+</body>
+</html>
