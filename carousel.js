@@ -25,7 +25,6 @@
 
   var Carousel = function (element, options) {
     this.$element    = $(element)
-    this.$indicators = this.$element.find('.carousel-indicators')
     this.options     = options
     this.paused      =
     this.sliding     =
@@ -99,7 +98,8 @@
 
   Carousel.prototype.slide = function (type, next) {
     var $active   = this.$element.find('.item.active')
-    var $next     = next || $active[type]()
+    var $active2   = this.$element.find('.item.active2')
+    var $next     = next || $active2[type]()
     var isCycling = this.interval
     var direction = type == 'next' ? 'left' : 'right'
     var fallback  = type == 'next' ? 'first' : 'last'
@@ -115,14 +115,6 @@
 
     if ($next.hasClass('active')) return
 
-    if (this.$indicators.length) {
-      this.$indicators.find('.active').removeClass('active')
-      this.$element.one('slid', function () {
-        var $nextIndicator = $(that.$indicators.children()[that.getActiveIndex()])
-        $nextIndicator && $nextIndicator.addClass('active')
-      })
-    }
-
     if ($.support.transition && this.$element.hasClass('slide')) {
       this.$element.trigger(e)
       if (e.isDefaultPrevented()) return
@@ -132,8 +124,9 @@
       $next.addClass(direction)
       $active
         .one($.support.transition.end, function () {
-          $next.removeClass([type, direction].join(' ')).addClass('active')
           $active.removeClass(['active', direction].join(' '))
+          $active2.removeClass(['active2', direction].join(' ')).addClass('active')
+          $next.removeClass([type, direction].join(' ')).addClass('active2')
           that.sliding = false
           setTimeout(function () { that.$element.trigger('slid') }, 0)
         })
@@ -142,7 +135,9 @@
       this.$element.trigger(e)
       if (e.isDefaultPrevented()) return
       $active.removeClass('active')
-      $next.addClass('active')
+      $active2.addClass('active')
+      $active2.removeClass('active2')
+      $next.addClass('active2')
       this.sliding = false
       this.$element.trigger('slid')
     }
