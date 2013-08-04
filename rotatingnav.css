@@ -33,12 +33,14 @@
   text-transform: uppercase;
 }
 .rotatingnav-inner > .active,
+.rotatingnav-inner > .active2,
 .rotatingnav-inner > .next,
 .rotatingnav-inner > .prev {
-  display: block;
+  display: inline-block;
 }
-.rotatingnav-inner > .active {
-  left: 0;
+.rotatingnav-inner > .active,
+.rotatingnav-inner > .active2 {
+  left: 20px;
 }
 .rotatingnav-inner > .next,
 .rotatingnav-inner > .prev {
