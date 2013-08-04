@@ -61,7 +61,9 @@
   width: 200px;
 }
 
-.rotating-nav-inner > .item > img, .rotating-nav-inner > .item > a > img {
+.rotating-nav-inner > .item > img, 
+.rotating-nav-inner > .item > a > img, 
+.rotating-nav-inner > .item > a {
   display: inline-block;
   height: auto;
   max-width: 100%;
@@ -78,4 +80,12 @@
 
 .rotating-nav-inner > .active, .rotating-nav-inner > .active2, .rotating-nav-inner > .next, .rotating-nav-inner > .prev {
   display: inline-block;
+}
+
+.rotating-nav-inner > .panel > a {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
