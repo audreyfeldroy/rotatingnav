@@ -82,7 +82,7 @@
   display: inline-block;
 }
 
-.rotating-nav-inner > .panel > a {
+.rotating-nav-inner > .item > a {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 11px;
   color: #1a1a1a;
