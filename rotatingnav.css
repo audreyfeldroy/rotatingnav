@@ -5,6 +5,12 @@
 .pull-left {
   float: left;
 }
+/**
+ * Main styles
+ */
+.rotatingnav-container {
+  max-width: 440px;
+}
 .rotatingnav {
   position: relative;
 }
