@@ -29,7 +29,7 @@
   position: relative;
   -webkit-transition: 0.6s ease-in-out left;
   transition: 0.6s ease-in-out left;
-  width: 140px;
+  width: 16.66666666%;
 }
 .rotatingnav-inner > .item > a {
   font-family: Helvetica, Arial, sans-serif;

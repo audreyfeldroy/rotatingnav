@@ -7,6 +7,7 @@
 // Variables
 // ------------------------
 @rotatingnav-text-shadow:                        0 1px 2px rgba(0,0,0,.6);
+@rotatingnav-panel-width:                        16.66666666%;
 @rotatingnav-control-width:                      4%;
 @rotatingnav-control-color:                      #fff;
 
@@ -38,7 +39,7 @@
     display: none;
     position: relative;
     .transition(.6s ease-in-out left);
-    width: 140px;
+    width: @rotatingnav-panel-width;
     
     > a {
       font-family: Helvetica, Arial, sans-serif;
