@@ -3,14 +3,13 @@
 <head>
     <title>Rotating Nav Example</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="bootstrap.min.css" rel="stylesheet">
-    <link href="rotating-nav.css" rel="stylesheet">
+    <link href="rotatingnav.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
 
-  <div id="rotating-nav1" class="carousel slide">
-    <div class="rotating-nav-inner">
+  <div id="rotatingnav1" class="rotatingnav slide">
+    <div class="rotatingnav-inner">
       <div class="item active">
         <a href="TODO">Apples</a><br/>
         <a href="TODO">Apples 2</a><br/>
@@ -86,10 +85,10 @@
       </div>
     </div>
     
-    <a class="btn-left" href="#rotating-nav1" data-slide="prev">
+    <a class="btn-left" href="#rotatingnav1" data-slide="prev">
       <span class="icon-prev"></span>
     </a>
-    <a class="btn-right" href="#rotating-nav1" data-slide="next">
+    <a class="btn-right" href="#rotatingnav1" data-slide="next">
       <span class="icon-next"></span>
     </a>
   </div>
@@ -97,9 +96,9 @@
 </div>
 <script src="jquery.min.js"></script>
 <script src="holder.js"></script>
-<script src="rotating-nav.js"></script>
+<script src="rotatingnav.js"></script>
 <script>
-$('.carousel').carousel();
+$('.rotatingnav').rotatingnav();
 </script>
 </body>
 </html>

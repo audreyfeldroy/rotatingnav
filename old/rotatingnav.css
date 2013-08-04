@@ -47,14 +47,14 @@
   zoom: 1;
 }
 
-.rotating-nav-inner {
+.rotatingnav-inner {
   position: relative;
   width: 100%;
   overflow: hidden;
   background-color: #E4FEFF;
 }
 
-.rotating-nav-inner > .item {
+.rotatingnav-inner > .item {
   position: relative;
   display: none;
   -webkit-transition: .6s ease-in-out left;
@@ -62,28 +62,28 @@
   width: 200px;
 }
 
-.rotating-nav-inner > .item > img, 
-.rotating-nav-inner > .item > a > img, 
-.rotating-nav-inner > .item > a {
+.rotatingnav-inner > .item > img, 
+.rotatingnav-inner > .item > a > img, 
+.rotatingnav-inner > .item > a {
   display: inline-block;
   height: auto;
   max-width: 100%;
   line-height: 1;
 }
 
-.rotating-nav-inner > .active {
+.rotatingnav-inner > .active {
   left: 20px;
 }
 
-.rotating-nav-inner > .active2 {
+.rotatingnav-inner > .active2 {
   left: 20px;
 }
 
-.rotating-nav-inner > .active, .rotating-nav-inner > .active2, .rotating-nav-inner > .next, .rotating-nav-inner > .prev {
+.rotatingnav-inner > .active, .rotatingnav-inner > .active2, .rotatingnav-inner > .next, .rotatingnav-inner > .prev {
   display: inline-block;
 }
 
-.rotating-nav-inner > .item > a {
+.rotatingnav-inner > .item > a {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 11px;
   color: #1a1a1a;
