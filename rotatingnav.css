@@ -6,11 +6,15 @@
   float: left;
 }
 /**
- * Main styles
+ * Temporary styles to be removed
  */
 .rotatingnav-container {
-  max-width: 440px;
+  max-width: 940px;
+  margin: 0 auto;
 }
+/**
+ * Main styles
+ */
 .rotatingnav {
   position: relative;
 }
