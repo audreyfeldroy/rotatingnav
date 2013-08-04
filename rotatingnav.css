@@ -93,7 +93,6 @@
   content: '\203a';
 }
 @media screen and (min-width: 768px) {
-  .rotatingnav-control .glyphicon,
   .rotatingnav-control .icon-prev,
   .rotatingnav-control .icon-next {
     width: 30px;
@@ -101,13 +100,5 @@
     margin-top: -15px;
     margin-left: -15px;
     font-size: 30px;
-  }
-  .rotatingnav-caption {
-    left: 20%;
-    right: 20%;
-    padding-bottom: 30px;
-  }
-  .rotatingnav-indicators {
-    bottom: 20px;
   }
 }
