@@ -18,6 +18,7 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  background-color: #f0f0f0;
 }
 .rotatingnav-inner > .item {
   display: none;
