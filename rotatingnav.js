@@ -148,11 +148,8 @@
     console.log('.active index: ' + active_index)
     console.log('.active2 index: ' + active2_index)
 
-    if (active2_index < active_index) {
-        $('.active').addClass('pull-left')
-    } else {
-        $('.item').removeClass('pull-left')
-    }
+    if (active2_index < active_index) $('.active').addClass('pull-left')
+    else $('.item').removeClass('pull-left')
 
     isCycling && this.cycle()
 
