@@ -29,7 +29,9 @@
   position: relative;
   -webkit-transition: 0.6s ease-in-out left;
   transition: 0.6s ease-in-out left;
-  width: 16.66666666%;
+  width: 18.8%;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 .rotatingnav-inner > .item > a {
   font-family: Helvetica, Arial, sans-serif;
