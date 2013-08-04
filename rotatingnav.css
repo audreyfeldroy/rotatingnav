@@ -29,6 +29,7 @@
   position: relative;
   -webkit-transition: 0.6s ease-in-out left;
   transition: 0.6s ease-in-out left;
+  width: 140px;
 }
 .rotatingnav-inner > .item > a {
   font-family: Helvetica, Arial, sans-serif;
@@ -45,7 +46,7 @@
 }
 .rotatingnav-inner > .active,
 .rotatingnav-inner > .active2 {
-  left: 6%;
+  left: 4%;
 }
 .rotatingnav-inner > .next,
 .rotatingnav-inner > .prev {
@@ -74,7 +75,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 6%;
+  width: 4%;
   font-size: 20px;
   color: #ffffff;
   background-color: #000000;
