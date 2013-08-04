@@ -20,10 +20,10 @@
 
 +function ($) { "use strict";
 
-  // CAROUSEL CLASS DEFINITION
-  // =========================
+  // ROTATINGNAV CLASS DEFINITION
+  // ============================
 
-  var Carousel = function (element, options) {
+  var RotatingNav = function (element, options) {
     this.$element    = $(element)
     this.options     = options
     this.paused      =
@@ -37,12 +37,12 @@
       .on('mouseleave', $.proxy(this.cycle, this))
   }
 
-  Carousel.DEFAULTS = {
+  RotatingNav.DEFAULTS = {
     interval: 5000
   , pause: 'hover'
   }
 
-  Carousel.prototype.cycle =  function (e) {
+  RotatingNav.prototype.cycle =  function (e) {
     e || (this.paused = false)
 
     this.interval && clearInterval(this.interval)
@@ -54,14 +54,14 @@
     return this
   }
 
-  Carousel.prototype.getActiveIndex = function () {
+  RotatingNav.prototype.getActiveIndex = function () {
     this.$active = this.$element.find('.item.active')
     this.$items  = this.$active.parent().children()
 
     return this.$items.index(this.$active)
   }
 
-  Carousel.prototype.to = function (pos) {
+  RotatingNav.prototype.to = function (pos) {
     var that        = this
     var activeIndex = this.getActiveIndex()
 
@@ -73,7 +73,7 @@
     return this.slide(pos > activeIndex ? 'next' : 'prev', $(this.$items[pos]))
   }
 
-  Carousel.prototype.pause = function (e) {
+  RotatingNav.prototype.pause = function (e) {
     e || (this.paused = true)
 
     if (this.$element.find('.next, .prev').length && $.support.transition.end) {
@@ -86,17 +86,17 @@
     return this
   }
 
-  Carousel.prototype.next = function () {
+  RotatingNav.prototype.next = function () {
     if (this.sliding) return
     return this.slide('next')
   }
 
-  Carousel.prototype.prev = function () {
+  RotatingNav.prototype.prev = function () {
     if (this.sliding) return
     return this.slide('prev')
   }
 
-  Carousel.prototype.slide = function (type, next) {
+  RotatingNav.prototype.slide = function (type, next) {
     var $active   = this.$element.find('.item.active')
     var $active2   = this.$element.find('.item.active2')
     var $next     = next || $active2[type]()
@@ -160,8 +160,8 @@
   }
 
 
-  // CAROUSEL PLUGIN DEFINITION
-  // ==========================
+  // ROTATINGNAV PLUGIN DEFINITION
+  // =============================
 
   var old = $.fn.rotatingnav
 
@@ -169,21 +169,21 @@
     return this.each(function () {
       var $this   = $(this)
       var data    = $this.data('bs.rotatingnav')
-      var options = $.extend({}, Carousel.DEFAULTS, $this.data(), typeof option == 'object' && option)
+      var options = $.extend({}, RotatingNav.DEFAULTS, $this.data(), typeof option == 'object' && option)
       var action  = typeof option == 'string' ? option : options.slide
 
-      if (!data) $this.data('bs.rotatingnav', (data = new Carousel(this, options)))
+      if (!data) $this.data('bs.rotatingnav', (data = new RotatingNav(this, options)))
       if (typeof option == 'number') data.to(option)
       else if (action) data[action]()
       else if (options.interval) data.pause().cycle()
     })
   }
 
-  $.fn.rotatingnav.Constructor = Carousel
+  $.fn.rotatingnav.Constructor = RotatingNav
 
 
-  // CAROUSEL NO CONFLICT
-  // ====================
+  // ROTATINGNAV NO CONFLICT
+  // =======================
 
   $.fn.rotatingnav.noConflict = function () {
     $.fn.rotatingnav = old
@@ -191,8 +191,8 @@
   }
 
 
-  // CAROUSEL DATA-API
-  // =================
+  // ROTATINGNAV DATA-API
+  // ====================
 
   $(document).on('click.bs.rotatingnav.data-api', '[data-slide], [data-slide-to]', function (e) {
     var $this   = $(this), href
