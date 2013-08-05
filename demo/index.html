@@ -8,7 +8,7 @@
 <body>
 <div class="rotatingnav-container">
 
-  <div class="rotatingnav slide">
+  <div id="myrotatingnav" class="rotatingnav slide">
     <div class="rotatingnav-inner">
       <div class="item active">
         <a href="TODO">Apples</a><br/>
@@ -96,5 +96,13 @@
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="../dist/jquery.rotatingnav.js"></script>
+<script>
+$(function() {
+	$(".rotatingnav").rotatingnav({
+    panelCount: 8,
+    activeCount: 4
+	});
+});
+</script>
 </body>
 </html>

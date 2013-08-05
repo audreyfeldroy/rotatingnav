@@ -17,10 +17,54 @@
   RotatingNav.prototype = {
 
     init: function () {
-      this.activeHead = 0;
-      this.activeTail = this.activeCount - 1;
-      this.panelHead = 0;
-      this.panelTail = this.panelCount - 1;
+      var that = this;
+      that.activeHead = 0;
+      that.activeTail = this.settings.activeCount - 1;
+      that.panelHead = 0;
+      that.panelTail = this.settings.panelCount - 1;
+
+      that.updateActive();
+      $(".left.rotatingnav-control").click(that.shiftBackward);
+      $(".right.rotatingnav-control").click(that.shiftForward);
+      $("body").keypress(function (event) {
+        if (event.which === 102) { // f - forward
+          that.shiftForward();
+        } else if (event.which === 98) { // b - backward
+          that.shiftBackward();
+        }
+      });
+    },
+
+    isActive: function (index) {
+      if (this.activeHead < this.activeTail &&
+          this.activeHead <= index &&
+          index <= this.activeTail) {
+        return true;
+      } else if (this.activeHead > this.activeTail &&
+                 !(this.activeTail < index &&
+                   index < this.activeHead)) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+
+    updateActive: function () {
+      var that = this;
+      console.log("activeHead " + that.activeHead + ", activeTail " + that.activeTail);
+      $(".item").removeClass("pull-left");
+      $(".item").removeClass("active");
+      $(".item").each(function(index){
+        if (that.isActive(index)) {
+          $(this).addClass("active");
+          $(this).show();
+          if (index > that.activeTail) {
+            $(this).addClass("pull-left");
+          }
+        } else {
+          $(this).hide();
+        }
+      });
     },
 
     shiftForward: function () {
@@ -48,38 +92,8 @@
         this.activeTail = this.panelTail;
       }
       this.updateActive();
-    },
-
-    isActive: function (index) {
-      if (this.activeHead < this.activeTail &&
-          this.activeHead <= index &&
-          index <= this.activeTail) {
-        return true;
-      } else if (this.activeHead > this.activeTail &&
-                 !(this.activeTail < index &&
-                   index < this.activeHead)) {
-        return true;
-      } else {
-        return false;
-      }
-    },
-
-    updateActive: function () {
-      console.log("activeHead " + this.activeHead + ", activeTail " + this.activeTail);
-      $(".item").removeClass("pull-left");
-      $(".item").removeClass("active");
-      $(".item").each(function(index){
-        if (this.isActive(index)) {
-          $(this).addClass("active");
-          $(this).show();
-          if (index > this.activeTail) {
-            $(this).addClass("pull-left");
-          }
-        } else {
-          $(this).hide();
-        }
-      });
     }
+
   };
 
   $.fn[ rotatingnav ] = function ( options ) {
