@@ -32,8 +32,12 @@
       that.panelTail = this.settings.panelCount - 1;
 
       that.updateActive();
-      $(".left.rotatingnav-control").click(that.shiftBackward);
-      $(".right.rotatingnav-control").click(that.shiftForward);
+      $(".left.rotatingnav-control").click(function () {
+        that.shiftBackward();
+      });
+      $(".right.rotatingnav-control").click(function () {
+        that.shiftForward();
+      });
       $("body").keypress(function (event) {
         if (event.which === 102) { // f - forward
           that.shiftForward();
