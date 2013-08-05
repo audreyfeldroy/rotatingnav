@@ -1,6 +1,4 @@
-===========
-rotatingnav
-===========
+# rotatingnav
 
 A nav menu that rotates through infinite links, allowing for more nav menu links than can normally fit.
 
@@ -12,3 +10,18 @@ The above is just a screenshot. For a live demo, see http://bl.ocks.org/audreyr/
 * To go backward: click < or press b
 
 This will be going into the new djangopackages.com and OpenComparison framework soon. Stay tuned.
+
+### Usage
+
+Add this bit of JS:
+
+```
+$(function() {
+	$(".rotatingnav").rotatingnav({
+    panelCount: 8,
+    activeCount: 4
+	});
+});
+```
+
+As for the corresponding HTML, see [demo/index.html](https://github.com/audreyr/rotatingnav/blob/master/demo/index.html) for an example of how to define the HTML for a nav menu with tons and tons of links.
