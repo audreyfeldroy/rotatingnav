@@ -25,3 +25,7 @@ $(function() {
 ```
 
 As for the corresponding HTML, see [demo/index.html](https://github.com/audreyr/rotatingnav/blob/master/demo/index.html) for an example of how to define the HTML for a nav menu with tons and tons of links.
+
+### License
+
+MIT. http://audreyr.mit-license.org
