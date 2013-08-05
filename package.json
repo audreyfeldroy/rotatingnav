@@ -1,0 +1,19 @@
+{
+	"name": "rotatingnav",
+	"title": "jQuery RotatingNav",
+	"description": "A nav menu that rotates through infinite links, allowing for more nav menu links than can normally fit.",
+	"author": "Audrey Roy",
+	"homepage": "https://github.com/audreyr/rotatingnav/",
+	"version": "0.1.0",
+	"devDependencies": {
+		"grunt": "~0.4.1",
+		"grunt-cli": "~0.1.7",
+		"grunt-contrib-jshint": "~0.4.3",
+		"grunt-contrib-concat": "~0.3.0",
+		"grunt-contrib-uglify": "~0.2.0",
+		"grunt-contrib-less": "~0.6.4"
+	},
+	"scripts": {
+		"test": "grunt travis --verbose"
+	}
+}
