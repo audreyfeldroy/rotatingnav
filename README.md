@@ -4,7 +4,9 @@ rotatingnav
 
 A nav menu that rotates through infinite links, allowing for more nav menu links than can normally fit.
 
-See http://bl.ocks.org/audreyr/6151852 for a working example.
+![Screenshot of rotatingnav](rotatingnav-screenshot.png)
+
+The above is just a screenshot. For a live demo, see http://bl.ocks.org/audreyr/6151852. In the demo:
 
 * To advance forward: click > or press f
 * To go backward: click < or press b
