@@ -76,7 +76,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-less");
   grunt.loadNpmTasks("grunt-contrib-cssmin");
 
-  grunt.registerTask("default", ["jshint", "concat", "uglify"]);
+  grunt.registerTask("default", ["jshint", "concat", "uglify", "less", "cssmin"]);
   grunt.registerTask("travis", ["jshint"]);
 
 };
