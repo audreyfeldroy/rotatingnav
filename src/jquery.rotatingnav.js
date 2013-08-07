@@ -6,6 +6,9 @@
  *  Made by Audrey Roy
  *  Under MIT License
  */
+if (typeof DEBUG === "undefined") {
+  DEBUG = true;
+}
 
 ;(function ( $, window, document, undefined ) {
 
@@ -64,7 +67,7 @@
 
     updateActive: function () {
       var that = this;
-      console.log("activeHead " + that.activeHead + ", activeTail " + that.activeTail);
+      DEBUG && console.log("activeHead " + that.activeHead + ", activeTail " + that.activeTail);
       $(".item").removeClass("pull-left");
       $(".item").removeClass("active");
       $(".item").each(function(index){
@@ -81,7 +84,7 @@
     },
 
     shiftForward: function () {
-      console.log("Shifting forward");
+      DEBUG && console.log("Shifting forward");
       this.activeHead++;
       this.activeTail++;
       if (this.activeTail > this.panelTail) {
@@ -94,7 +97,7 @@
     },
 
     shiftBackward: function () {
-      console.log("Shifting backward");
+      DEBUG && console.log("Shifting backward");
       this.activeHead--;
       this.activeTail--;
       if (this.activeHead < this.panelHead) {

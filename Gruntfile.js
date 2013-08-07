@@ -51,7 +51,13 @@ module.exports = function(grunt) {
         dest: "dist/jquery.rotatingnav.min.js"
       },
       options: {
-        banner: "<%= meta.banner %>"
+        banner: "<%= meta.banner %>",
+        compress: {
+          global_defs: {
+            "DEBUG": false
+          },
+          dead_code: true
+        }
       }
     },
 
