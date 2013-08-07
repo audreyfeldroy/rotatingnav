@@ -35,11 +35,19 @@ module.exports = function(grunt) {
         jshintrc: ".jshintrc"
       }
     },
+    
+    // Copy main js file to dist
+    copy: {
+      dist: {
+        src: "src/jquery.rotatingnav.js",
+        dest: "dist/jquery.rotatingnav.js"
+      }
+    },
 
     // Minify definitions
     uglify: {
       my_target: {
-        src: ["dist/jquery.rotatingnav.js"],
+        src: "dist/jquery.rotatingnav.js",
         dest: "dist/jquery.rotatingnav.min.js"
       },
       options: {
@@ -72,11 +80,12 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks("grunt-contrib-concat");
   grunt.loadNpmTasks("grunt-contrib-jshint");
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-less");
   grunt.loadNpmTasks("grunt-contrib-cssmin");
 
-  grunt.registerTask("default", ["jshint", "concat", "uglify", "less", "cssmin"]);
+  grunt.registerTask("default", ["jshint", "concat", "copy", "uglify", "less", "cssmin"]);
   grunt.registerTask("travis", ["jshint"]);
 
 };

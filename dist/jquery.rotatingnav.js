@@ -6,6 +6,7 @@
  *  Made by Audrey Roy
  *  Under MIT License
  */
+
 ;(function ( $, window, document, undefined ) {
 
   var rotatingnav = "rotatingnav",
