@@ -15,6 +15,10 @@
     "grunt-contrib-copy": "~0.4.1",
     "grunt-release": "~0.5.1"
   },
+  "repository": {
+    "type" : "git",
+    "url" : "http://github.com/audreyr/rotatingnav.git"
+  }
   "scripts": {
     "test": "grunt travis --verbose"
   }
