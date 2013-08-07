@@ -80,8 +80,13 @@ module.exports = function(grunt) {
           'dist/jquery.rotatingnav.min.css': ['dist/jquery.rotatingnav.css']
         }
       }
-    }
+    },
 
+    // Release to NPM
+    release: {
+      
+    }
+    
   });
 
   grunt.loadNpmTasks("grunt-contrib-concat");
@@ -90,6 +95,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-less");
   grunt.loadNpmTasks("grunt-contrib-cssmin");
+  grunt.loadNpmTasks('grunt-release');
 
   grunt.registerTask("default", ["jshint", "concat", "copy", "uglify", "less", "cssmin"]);
   grunt.registerTask("travis", ["jshint"]);
