@@ -22,7 +22,7 @@
   position: relative;
   -webkit-transition: 0.6s ease-in-out left;
   transition: 0.6s ease-in-out left;
-  width: 18.8%;
+  width: 16.8%;
   margin-left: 1%;
   margin-right: 1%;
 }
@@ -41,7 +41,7 @@
 }
 .rotatingnav-inner > .active,
 .rotatingnav-inner > .active2 {
-  left: 4%;
+  left: 2%;
 }
 .rotatingnav-inner > .next,
 .rotatingnav-inner > .prev {
@@ -70,7 +70,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 4%;
+  width: 2%;
   font-size: 20px;
   color: #ffffff;
   background-color: #000000;
