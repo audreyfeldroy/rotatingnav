@@ -1,5 +1,5 @@
 /*
- *  jQuery RotatingNav - v0.1.0
+ *  jQuery RotatingNav
  *  A nav menu that rotates through infinite links, allowing for more nav menu links than can normally fit.
  *  https://github.com/audreyr/rotatingnav/
  *
