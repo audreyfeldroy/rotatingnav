@@ -1,6 +1,7 @@
 # rotatingnav
 
 [![Build Status](https://secure.travis-ci.org/audreyr/rotatingnav.png?branch=master)](https://travis-ci.org/audreyr/rotatingnav)
+[![devDependencies](https://david-dm.org/audreyr/rotatingnav#info=devDependencies)](https://david-dm.org/audreyr/rotatingnav.png)
 
 A nav menu that rotates through infinite links, allowing for more nav menu links than can normally fit.
 
