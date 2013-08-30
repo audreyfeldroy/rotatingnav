@@ -13,7 +13,7 @@
 		"jquery"
 	],
   "dependencies": {
-		"jquery": ">=1.4"
+		"component/jQuery": "*"
 	},
   "development": {},
   "license": "MIT",
