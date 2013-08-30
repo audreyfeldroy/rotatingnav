@@ -9,7 +9,9 @@ The above is just a screenshot. For a live demo, see http://bl.ocks.org/audreyr/
 * To advance forward: click > or press f
 * To go backward: click < or press b
 
-You can also see a styled version at the top of the new [djangopackages.com](https://www.djangopackages.com).
+You can also see a styled version at the top of the new [djangopackages.com](https://www.djangopackages.com), which looks like this:
+
+![Screenshot of rotatingnav on Django Packages](rotatingnav-screenshot2.png)
 
 ### Usage
 
